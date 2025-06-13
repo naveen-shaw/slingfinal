@@ -1,4 +1,5 @@
 import 'package:mpay/config.dart';
+import 'layout/kyc_info_layout.dart';
 
 class ConfirmIdentityScreen extends StatelessWidget {
   const ConfirmIdentityScreen({super.key});
@@ -19,11 +20,13 @@ class ConfirmIdentityScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // confirmIdentity screen camara and add id's layout
+              // KYC Document Information
+              const KYCInfoLayout(),
+              // Document Upload Section
               ConfirmIdentityWidgets()
                   .ciCameraLayout(context)
                   .paddingOnly(top: Sizes.s30, bottom: Sizes.s50),
-              // ConfirmIdentity Submit all button layout
+              // Submit Button
               ConfirmIdentityWidgets().ciBottomButtonLayout(context)
             ],
           ),

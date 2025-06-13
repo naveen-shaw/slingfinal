@@ -1,4 +1,6 @@
 import 'package:mpay/config.dart';
+import 'layout/signup_basic_info_layout.dart';
+import 'layout/signup_terms_layout.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -20,8 +22,10 @@ class SignupScreen extends StatelessWidget {
                   shrinkWrap: true,
                   children: [
                 Column(children: [
-                  // signUp screen enter FullName,enter email,enter pin,confirm pin,I Agree To AllTerms & condition text & textFiled layout
-                  const SignupTextFiledLayout(),
+                  // Basic Information Fields
+                  const SignupBasicInfoLayout(),
+                  // Terms & Conditions
+                  const SignupTermsLayout(),
                   //SignUp button Layout
                   SignUpWidgets().signUpButtonLayout(context),
                   // Signup already have an account rich text
